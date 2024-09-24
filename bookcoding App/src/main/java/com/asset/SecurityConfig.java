@@ -32,6 +32,11 @@ public class SecurityConfig {
                         .requestMatchers("/admin/hello").hasRole("ADMIN")
                         .requestMatchers("/user/hello").hasAnyRole("USER", "ADMIN")
                         .requestMatchers("/doctor/add").hasRole("ADMIN")
+                        .requestMatchers("/book/add").hasRole("ADMIN")
+                        .requestMatchers("/book/getall").hasRole("ADMIN")
+                        .requestMatchers("/book/by/{isbn}").hasRole("ADMIN")
+                        .requestMatchers("/book/update/{isbn}").hasRole("ADMIN")
+                        .requestMatchers("/book/delete/{isbn}").hasRole("ADMIN")
                         
                         .requestMatchers("/employee/add").hasRole("ADMIN")
                         .requestMatchers("/asset/add").hasRole("ADMIN")
